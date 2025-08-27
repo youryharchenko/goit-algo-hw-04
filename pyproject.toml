@@ -1,0 +1,33 @@
+[project]
+name = "goit-algo-hw-04"
+version = "0.1.0"
+description = "Домашнє завдання до теми 2 'Основні структури даних'"
+
+authors = [
+    {name = "youry07",email = "youry@ukr.net"}
+]
+
+readme = "README.md"
+requires-python = ">=3.12"
+
+dependencies = [
+    "rich (>=14.1.0,<15.0.0)",
+    "typer (>=0.16.1,<0.17.0)"
+]
+
+[project.scripts]
+main_01 = "j01.main:main"
+main_02 = "j02.main:main"
+main_03 = "j03.main:main"
+
+[tool.poetry]
+packages = [{include = "j01", from = "."}, {include = "j02", from = "."}, {include = "j03", from = "."}]
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.5"
+black = "^25.1.0"
+flake8 = "^7.2.0"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
